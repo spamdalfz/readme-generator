@@ -39,7 +39,7 @@ function init() {
                 type: 'list',
                 name: 'license',
                 message: 'Which license does your project use?',
-                choices: ['MIT', 'GPLv3', 'Apache', 'BSD', 'Unlicense'],
+                choices: ['MIT', 'GPLv3', 'Apache', 'BSD', 'Unlicense', 'No License'],
             },
             {
                 type: 'input',

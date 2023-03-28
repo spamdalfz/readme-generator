@@ -1,9 +1,8 @@
 function renderLicenseBadge(license) {
-  let licenseBadge = '';
-  if (license) {
-    licenseBadge = `![License](https://img.shields.io/badge/license-${license}-brightgreen.svg)`;
+  if (license === 'No License') {
+    return '';
   }
-  return licenseBadge;
+  return `![License](https://img.shields.io/badge/license-${license}-brightgreen.svg)`;
 }
 
 function renderLicenseLink(license) {
@@ -18,20 +17,20 @@ function renderLicenseLink(license) {
 }
 
 function renderLicenseSection(license) {
-  let licenseText = '';
-  if (license) {
-    licenseText = `## License
+  if (license === 'No License') {
+    return '';
+  }
+  return `## License
 
 This project is licensed under the ${license} license. Click [here](${renderLicenseLink(license)}) for more information.`;
-  }
-  return licenseText;
 }
 
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
+
   return `# ${data.title}
-  ${licenseBadge}
+${licenseBadge}
 
   ## Description
 
