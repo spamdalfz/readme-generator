@@ -56,6 +56,7 @@ function init() {
         .then((answers) => {
             const readmeData = generateMarkdown(answers);
             writeToFile('README.md', readmeData);
+            console.log(answers)
         });
 
     function writeToFile(fileName, data) {

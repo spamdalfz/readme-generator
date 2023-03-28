@@ -1,35 +1,35 @@
+function renderLicenseBadge(license) {
+  let licenseBadge = '';
+  if (license) {
+    licenseBadge = `![License](https://img.shields.io/badge/license-${license}-brightgreen.svg)`;
+  }
+  return licenseBadge;
+}
+
+function renderLicenseLink(license) {
+  const licenseUrls = {
+    'apache': 'https://www.apache.org/licenses/LICENSE-2.0',
+    'bsd': 'https://opensource.org/licenses/BSD-3-Clause',
+    'mit': 'https://opensource.org/licenses/MIT',
+    'gplv3': 'https://www.gnu.org/licenses/gpl-3.0',
+    'unlicense': 'http://unlicense.org/'
+  };
+  return licenseUrls[license.toLowerCase()] || '';
+}
+
+function renderLicenseSection(license) {
+  let licenseText = '';
+  if (license) {
+    licenseText = `## License
+
+This project is licensed under the ${license} license. Click [here](${renderLicenseLink(license)}) for more information.`;
+  }
+  return licenseText;
+}
+
 function generateMarkdown(data) {
-
-  function renderLicenseBadge(license) {
-    let licenseBadge = '';
-    if (license) {
-      licenseBadge = `![License](https://img.shields.io/badge/license-${license}-brightgreen.svg)`;
-    }
-    return licenseBadge;
-  }
-
-  function renderLicenseLink(license) {
-    const licenseUrls = {
-      'apache-2.0': 'https://opensource.org/licenses/Apache-2.0',
-      'mit': 'https://opensource.org/licenses/MIT',
-      'gpl-3.0': 'https://www.gnu.org/licenses/gpl-3.0'
-    };
-
-    return licenseUrls[license.toLowerCase()] || '';
-  }
-
-  function renderLicenseSection(license) {
-    let licenseText = '';
-    if (license) {
-      licenseText = `## License
-  
-  This project is licensed under the ${license} license. Click [here](${renderLicenseLink(license)}) for more information.`;
-    }
-    return licenseText;
-  }
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
-
   return `# ${data.title}
   ${licenseBadge}
 
