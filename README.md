@@ -1,9 +1,9 @@
-# reade me generator
-  ![License](https://img.shields.io/badge/license-Apache-brightgreen.svg)
+# 
+  ![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
   ## Description
 
-  ok here is description
+  
   
   ## Table of Contents
   - [Installation](#installation)
@@ -14,21 +14,21 @@
   - [Questions](#questions)
   
   ## Installation
-  npm i in term yadda
+  
   
   ## Usage
-  make reade me
+  
   
   ## License
-
-This project is licensed under the Apache license. Click [here]() for more information.
+  
+  This project is licensed under the MIT license. Click [here](https://opensource.org/licenses/MIT) for more information.
   
   ## Contributing
-  dont do ir
+  
   
   ## Tests
-  no test
+  
   
   ## Questions
-  If you have any questions, you can reach out to me on [GitHub](https://github.com/spamdalfz) or contact me directly at coreyvasser@gmail.com.
+  If you have any questions, you can reach out to me on [GitHub](https://github.com/) or contact me directly at .
   
