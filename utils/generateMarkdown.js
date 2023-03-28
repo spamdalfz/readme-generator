@@ -1,3 +1,4 @@
+// function to render the license badge based on the selected license
 function renderLicenseBadge(license) {
   if (license === 'No License') {
     return '';
@@ -5,6 +6,7 @@ function renderLicenseBadge(license) {
   return `![License](https://img.shields.io/badge/license-${license}-brightgreen.svg)`;
 }
 
+// function to render the license link based on the selected license
 function renderLicenseLink(license) {
   const licenseUrls = {
     'apache': 'https://www.apache.org/licenses/LICENSE-2.0',
@@ -13,24 +15,27 @@ function renderLicenseLink(license) {
     'gplv3': 'https://www.gnu.org/licenses/gpl-3.0',
     'unlicense': 'http://unlicense.org/'
   };
+  // return the license URL for the selected license (or an empty string if no license is selected)
   return licenseUrls[license.toLowerCase()] || '';
 }
 
+// function to render the license section of the README based on the selected license
 function renderLicenseSection(license) {
   if (license === 'No License') {
     return '';
   }
   return `## License
-
 This project is licensed under the ${license} license. Click [here](${renderLicenseLink(license)}) for more information.`;
 }
 
+// function to generate the complete markdown file based on user input
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
 
+  // return the complete markdown file with all sections (including license section, if applicable)
   return `# ${data.title}
-${licenseBadge}
+  ${licenseBadge}
 
   ## Description
 
@@ -63,4 +68,5 @@ ${licenseBadge}
   `;
 }
 
+// export the generateMarkdown function so it can be used in other files
 module.exports = generateMarkdown;
