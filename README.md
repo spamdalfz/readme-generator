@@ -24,7 +24,7 @@ To use this application, please follow the steps below:
 4. Install the required dependencies by running `npm install`
 5. Start the application by running `node index.js`
 6. Answer the questions that appear in your terminal
-7. Once all questions have been answered, your README file will be generated in the "dist" folder.
+7. Once all questions have been answered, your README file will be generated.
 
 For a more detailed explanation of how to use this application, please refer to the [video tutorial](https://drive.google.com/file/d/1tFkYqE2ltQhfwItZXlViL2RBW9OUwZkV/view).
 
